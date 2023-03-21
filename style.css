@@ -1,0 +1,241 @@
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#article-preview {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#card-body {
+  height: 300px;
+}
+
+#article-card {
+  position: relative;
+  display: grid;
+  border-radius: 15px;
+  max-height: 300px;
+  max-width: 850px;
+  grid-template-columns: 326px 500px;
+  z-index: 0;
+}
+
+.drawers {
+  width: 400px;
+  height: 100%;
+  max-height: 300px;
+  border-radius: 15px;
+}
+
+.card-text {
+  box-sizing: border-box;
+  background-color: white;
+  max-height: 300px;
+  border-start-end-radius: 15px;
+  border-end-end-radius: 15px;
+  padding: 20px 60px 20px 40px;
+  color: hsl(212, 23%, 69%);
+  z-index: 1;
+}
+
+h1 {
+  color: hsl(217, 19%, 35%);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.author {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+  display: inline;
+  position: relative;
+  bottom: 20px;
+  padding-left: 10px;
+}
+
+.date {
+  display: block;
+  position: relative;
+  padding-left: 52px;
+  font-weight: 500;
+  color: hsl(212, 23%, 69%);
+}
+
+.avatar {
+  height: 15%;
+  border-radius: 50%;
+  margin-top: 15px;
+}
+
+.share {
+  position: relative;
+  bottom: 50px;
+  left: 375px;
+  border-radius: 50%;
+  background-color: hsl(210, 46%, 95%);
+  padding: 10px;
+  cursor: pointer;
+  fill: #6e8098;
+}
+
+.share.active {
+  background-color: hsl(217, 19%, 35%);
+  fill: hsl(210, 46%, 95%);
+}
+
+.social-media {
+  display: none;
+  position: absolute;
+  right: -66px;
+  bottom: 117px;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 8px;
+  /* padding: 5px 50px 5px 50px; */
+  z-index: 2;
+  height: 50px;
+}
+
+.social-media::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 15px solid transparent;
+  border-top-color: hsl(217, 19%, 35%);
+}
+
+.social-media.active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px 0px #ccc;
+}
+
+.facebook {
+  margin-left: 20px;
+}
+
+.twitter,
+.pinterest {
+  position: relative;
+  margin-left: 15px;
+}
+
+.share-paragraph {
+  padding-left: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.social-icons {
+  padding-right: 50px;
+  padding-top: 25px;
+}
+
+@media only screen and (max-width: 375px) {
+  #article-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    max-height: 300px;
+    max-width: 340px;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  }
+
+  .card-text {
+    position: relative;
+    bottom: 50px;
+    max-height: 330px;
+    border-start-end-radius: 0;
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
+    z-index: 1;
+  }
+
+  .drawers {
+    width: 340px;
+    height: 100%;
+    max-height: 300px;
+    border-radius: 15px;
+  }
+
+  .author {
+    bottom: 35px;
+    padding-left: 50px;
+  }
+
+  .date {
+    display: none;
+    display: block;
+    position: relative;
+    padding-left: 52px;
+    font-weight: 500;
+    color: hsl(212, 23%, 69%);
+  }
+
+  .avatar {
+    display: block;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  .share {
+    bottom: 65px;
+    left: 210px;
+    z-index: 3;
+  }
+
+  .share.active {
+    background-color: #6e8098;
+  }
+
+  .social-media {
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 2;
+    height: 65px;
+  }
+
+  .social-media.active {
+    display: flex;
+    box-shadow: none;
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+    border-end-end-radius: 8px;
+    border-end-start-radius: 8px;
+  }
+
+  .social-media::after {
+    display: none;
+  }
+
+  .share-paragraph {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .social-media p {
+    padding-right: 25px;
+  }
+}
