@@ -121,9 +121,6 @@ h1 {
 
 .social-media.active > * {
   margin: 0 auto;
-}
-
-.social-media.active > * {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,12 +208,6 @@ h1 {
     width: 100%;
     z-index: 2;
     height: 65px;
-  }
-
-  .social-media.active > * {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .social-media.active {
