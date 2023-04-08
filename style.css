@@ -100,29 +100,37 @@ h1 {
 .social-media {
   display: none;
   position: absolute;
-  right: -66px;
-  bottom: 117px;
+  right: -57px;
+  bottom: 112px;
   background-color: hsl(217, 19%, 35%);
   border-radius: 8px;
   z-index: 2;
-  height: 50px;
+  height: 55px;
+  width: 250px;
 }
 
 .social-media::after {
   content: "";
   position: absolute;
-  bottom: -30px;
+  bottom: -28px;
   left: 50%;
   transform: translateX(-50%);
   border: 15px solid transparent;
   border-top-color: hsl(217, 19%, 35%);
 }
 
+.social-media.active > * {
+  margin: 0 auto;
+}
+
+.social-media.active > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .social-media.active {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0px 5px 10px 0px #ccc;
 }
 
@@ -134,18 +142,6 @@ h1 {
 .pinterest {
   position: relative;
   margin-left: 15px;
-}
-
-.share-paragraph {
-  padding-left: 50px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: center;
-}
-
-.social-icons {
-  padding-right: 50px;
-  padding-top: 25px;
 }
 
 @media only screen and (max-width: 375px) {
@@ -217,6 +213,12 @@ h1 {
     height: 65px;
   }
 
+  .social-media.active > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .social-media.active {
     display: flex;
     box-shadow: none;
@@ -230,12 +232,7 @@ h1 {
     display: none;
   }
 
-  .share-paragraph {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .social-media p {
-    padding-right: 25px;
+    padding-right: 85px;
   }
 }
